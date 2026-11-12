@@ -13,9 +13,7 @@ import {
   ChevronDown,
   Flame,
   Phone,
-  Utensils,
   MapPin,
-  Clock,
 } from "lucide-react";
 import { RESTAURANT_INFO } from "@/data/menu";
 
@@ -68,7 +66,7 @@ export function Hero() {
             {/* Mascot Emblem & Subtitle */}
             <div className="flex items-center justify-center lg:justify-start gap-3">
               <div
-                className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-[#F59E0B] shadow-md overflow-hidden bg-[#0F172A] shrink-0 hover:scale-105 transition-transform"
+                className="relative w-13 h-13 sm:w-16 sm:h-16 rounded-full border-2 border-[#F59E0B] shadow-md overflow-hidden bg-[#0F172A] shrink-0 hover:scale-105 transition-transform"
                 style={{ position: "relative" }}
               >
                 <Image
@@ -88,40 +86,38 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Badges Bar: Real 4.0 Google Rating (272 Reviews), Free Delivery, Live Status */}
-            <div className="w-full max-w-md sm:max-w-xl lg:max-w-none mx-auto lg:mx-0 pt-0.5">
-              <div className="grid grid-cols-2 sm:flex sm:flex-row items-center justify-center lg:justify-start gap-2">
-                {/* Live Hours Badge */}
-                <div
-                  className={`col-span-1 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-extrabold shadow-sm ${
-                    status.isOpen
-                      ? "bg-emerald-100 text-emerald-900 border border-emerald-300"
-                      : "bg-amber-100 text-amber-900 border border-amber-300"
-                  }`}
-                >
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-                  <span className="whitespace-nowrap">{status.badgeLabel} • Closes 1 AM</span>
-                </div>
+            {/* Badges Bar: Fluid flex-wrap pill buttons that never overlap or clip */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1 max-w-xl mx-auto lg:mx-0">
+              {/* Live Hours Badge */}
+              <div
+                className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold shadow-sm ${
+                  status.isOpen
+                    ? "bg-emerald-50 text-emerald-900 border border-emerald-300"
+                    : "bg-amber-50 text-amber-900 border border-amber-300"
+                }`}
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                <span>{status.isOpen ? "Open Now • Closes 1 AM" : "Opens 1:00 PM • Closes 1 AM"}</span>
+              </div>
 
-                {/* Real 4.0 Google Rating Badge with 272 Reviews */}
-                <a
-                  href={RESTAURANT_INFO.directionsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="col-span-1 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-[#F59E0B] text-[11px] sm:text-xs font-bold text-[#0F172A] shadow-sm hover:bg-[#FEF3C7]/40 transition-colors"
-                >
-                  <Star className="w-3.5 h-3.5 fill-[#F59E0B] text-[#F59E0B] shrink-0" />
-                  <span className="font-extrabold text-[#E11D48]">4.0</span>
-                  <span className="text-[10px] sm:text-[11px] text-[#64748B] font-semibold whitespace-nowrap">
-                    (272 Google Reviews)
-                  </span>
-                </a>
+              {/* Real 4.0 Google Rating Badge with 272 Reviews */}
+              <a
+                href={RESTAURANT_INFO.directionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#F59E0B] text-xs font-bold text-[#0F172A] shadow-sm hover:bg-[#FEF3C7]/40 transition-colors"
+              >
+                <Star className="w-3.5 h-3.5 fill-[#F59E0B] text-[#F59E0B] shrink-0" />
+                <span className="font-extrabold text-[#E11D48]">4.0</span>
+                <span className="text-[11px] text-[#64748B] font-semibold">
+                  (272 Google Reviews)
+                </span>
+              </a>
 
-                {/* Free Delivery Chip */}
-                <div className="col-span-2 sm:col-span-auto inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#E11D48] text-white text-[11px] sm:text-xs font-bold shadow-sm whitespace-nowrap">
-                  <Truck className="w-3.5 h-3.5 text-[#FBBF24] shrink-0" />
-                  <span>Free Delivery (Min Rs 600)</span>
-                </div>
+              {/* Free Delivery Chip */}
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#E11D48] text-white text-xs font-bold shadow-sm">
+                <Truck className="w-3.5 h-3.5 text-[#FBBF24] shrink-0" />
+                <span>Free Delivery (Min Rs 600)</span>
               </div>
             </div>
 
@@ -215,7 +211,7 @@ export function Hero() {
                 style={{ position: "relative" }}
               >
                 <Image
-                  src="/images/hero-food.jpg"
+                  src="/images/food/pizza-crown-crust.jpg"
                   alt="Top Taste Shawarma, Crown Crust Pizza, Karahi, BBQ & Loaded Fries Spread"
                   fill
                   priority

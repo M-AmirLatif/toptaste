@@ -56,7 +56,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "shawarma",
     description: "Our signature powerhouse shawarma packed with loaded tender spiced chicken, melted cheese, and Top Taste secret white garlic sauce.",
     price: 420,
-    image: "/images/shawarma.jpg",
+    image: "/images/food/shawarma-special.jpg",
     badge: "House Signature",
     isSignature: true,
     isBestSeller: true,
@@ -67,7 +67,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "shawarma",
     description: "Classic Kasuri favorite with freshly carved spit-roasted chicken, crunchy pickled cucumber salad, and savory tahini garlic dressing.",
     price: 270,
-    image: "/images/shawarma.jpg",
+    image: "/images/food/shawarma-chicken.jpg",
     badge: "Best Value",
     isBestSeller: true,
   },
@@ -77,7 +77,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "shawarma",
     description: "Golden crispy fried chicken strips rolled inside warm pita bread with shredded iceberg, spicy mayo, and creamy garlic sauce.",
     price: 380,
-    image: "/images/shawarma.jpg",
+    image: "/images/food/shawarma-zinger.jpg",
     badge: "Crispy Crunch",
     isBestSeller: true,
   },
@@ -87,7 +87,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "shawarma",
     description: "A fusion masterpiece! Juicy chicken shawarma layered with rich pizza marinara, black olives, sweet corn, and bubbling mozzarella cheese.",
     price: 460,
-    image: "/images/shawarma.jpg",
+    image: "/images/food/shawarma-pizza.jpg",
     badge: "Cheese Fusion",
     isSignature: true,
   },
@@ -97,7 +97,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "shawarma",
     description: "Smoky char-grilled chicken chunks wrapped in toasted bread and brushed with authentic BBQ garlic dressing.",
     price: 450,
-    image: "/images/shawarma.jpg",
+    image: "/images/food/shawarma-grill.jpg",
   },
   {
     id: "chicken-platter-shawarma",
@@ -105,7 +105,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "shawarma",
     description: "Generous open-style feast: heaps of seasoned chicken shawarma meat served with 2 warm pita breads, golden french fries, pickled veggies, and signature dips.",
     price: 680,
-    image: "/images/gallery-platter.jpg",
+    image: "/images/food/shawarma-chicken-platter.jpg",
     badge: "Feast Platter",
     isSignature: true,
   },
@@ -115,7 +115,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "shawarma",
     description: "Crispy fried zinger strips piled high alongside 2 pita breads, loaded golden fries, coleslaw, garlic mayo, and fiery chili dips.",
     price: 780,
-    image: "/images/gallery-platter.jpg",
+    image: "/images/food/shawarma-zinger-platter.jpg",
     badge: "Chef Choice",
     isSignature: true,
   },
@@ -132,7 +132,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 1320 },
       { name: "Large (L)", price: 1850 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-special.jpg",
     badge: "House Signature",
     isSignature: true,
     isBestSeller: true,
@@ -148,7 +148,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 1320 },
       { name: "Large (L)", price: 1850 },
     ],
-    image: "/images/deep-dish-pizza.jpg",
+    image: "/images/food/pizza-crown-crust.jpg",
     badge: "Royal Crust",
     isSignature: true,
     isBestSeller: true,
@@ -164,7 +164,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 1320 },
       { name: "Large (L)", price: 1850 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-malai-boti.jpg",
     badge: "Creamy Desi",
   },
   {
@@ -178,7 +178,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 1320 },
       { name: "Large (L)", price: 1850 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-lazania.jpg",
   },
 
   // ===================== SPECIAL PIZZA =====================
@@ -193,7 +193,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 1280 },
       { name: "Large (L)", price: 1750 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-behari-kabab.jpg",
     badge: "Smoky Spice",
   },
   {
@@ -207,7 +207,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 1280 },
       { name: "Large (L)", price: 1750 },
     ],
-    image: "/images/deep-dish-pizza.jpg",
+    image: "/images/food/pizza-kabab-stuffer.jpg",
     badge: "Stuffed Crust",
   },
   {
@@ -221,7 +221,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 1280 },
       { name: "Large (L)", price: 1750 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-manakish.jpg",
   },
   {
     id: "chicken-supreme-pizza",
@@ -234,7 +234,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 1180 },
       { name: "Large (L)", price: 1650 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-supreme.jpg",
     badge: "All-Time Favorite",
   },
   {
@@ -248,7 +248,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 1180 },
       { name: "Large (L)", price: 1650 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-bbq.jpg",
   },
   {
     id: "achari-pizza",
@@ -261,7 +261,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 1180 },
       { name: "Large (L)", price: 1650 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-achari.jpg",
     badge: "Desi Chaska",
   },
 
@@ -277,7 +277,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 980 },
       { name: "Large (L)", price: 1380 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-tikka.jpg",
     badge: "Classic",
     isBestSeller: true,
   },
@@ -292,7 +292,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 980 },
       { name: "Large (L)", price: 1380 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-fajita.jpg",
   },
   {
     id: "chicken-cheese-pizza",
@@ -305,7 +305,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 980 },
       { name: "Large (L)", price: 1380 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-cheese.jpg",
   },
   {
     id: "cheese-lover-pizza",
@@ -318,7 +318,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 980 },
       { name: "Large (L)", price: 1380 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-cheese-lover.jpg",
   },
   {
     id: "vegetable-pizza",
@@ -331,7 +331,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Medium (M)", price: 980 },
       { name: "Large (L)", price: 1380 },
     ],
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-vegetable.jpg",
   },
 
   // ===================== BURGER =====================
@@ -341,7 +341,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "burgers",
     description: "New Arrival! Juicy flame-grilled seasoned 100% prime beef patty, melted cheddar slice, crunchy iceberg, and secret burger sauce.",
     price: 550,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/burger-beef.jpg",
     badge: "New Arrival",
     isSignature: true,
   },
@@ -351,7 +351,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "burgers",
     description: "Heavyweight beast: two thick grilled beef patties, double melted cheddar, caramelized onions, crisp greens, and signature sauce on a butter-toasted bun.",
     price: 800,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/burger-double-beef.jpg",
     badge: "Monster Burger",
     isSignature: true,
   },
@@ -361,7 +361,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "burgers",
     description: "Whole tender chicken breast fillet fried in ultra-crisp golden coating with house spicy creamy dressing and fresh lettuce.",
     price: 450,
-    image: "/images/zinger-burger.jpg",
+    image: "/images/food/burger-crispy-filly.jpg",
     badge: "Top Pick",
     isBestSeller: true,
   },
@@ -371,7 +371,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "burgers",
     description: "Kasur's favorite crispy spicy fried chicken thigh fillet, garlic mayo, fresh iceberg lettuce in a toasted sesame bun.",
     price: 380,
-    image: "/images/zinger-burger.jpg",
+    image: "/images/food/burger-zinger.jpg",
     badge: "Crowd Favorite",
     isBestSeller: true,
   },
@@ -381,7 +381,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "burgers",
     description: "Smoky charcoal-grilled chicken patty glazed with tangy barbecue marinade, tomatoes, and creamy garlic dressing.",
     price: 450,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/burger-grill.jpg",
     badge: "Smoky Grill",
   },
   {
@@ -390,7 +390,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "burgers",
     description: "Popular highlight! A toasted burger loaded with Italian marinara sauce, mozzarella cheese, spiced chicken, black olives, and herbs.",
     price: 400,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/burger-pizza.jpg",
     badge: "Google Highlight",
     isSignature: true,
     isBestSeller: true,
@@ -401,7 +401,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "burgers",
     description: "Tender boneless chicken marinated in cream, mild aromatic spices, yogurt, and butter, stacked with fresh salad in a soft bun.",
     price: 400,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/burger-malai-booti.jpg",
   },
   {
     id: "jumbo-burger",
@@ -409,7 +409,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "burgers",
     description: "Extra large oversized burger with double chicken patties, egg, melted cheese, fresh tomato, cucumber, and special dressing.",
     price: 520,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/burger-jumbo.jpg",
     badge: "Big Appetite",
   },
   {
@@ -418,7 +418,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "burgers",
     description: "Crispy chicken patty with crunchy salad and savory burger sauce. Delicious, quick, and economical.",
     price: 270,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/burger-patty.jpg",
     badge: "Pocket Friendly",
   },
 
@@ -429,7 +429,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "wraps",
     description: "Soft tortilla stuffed with grilled chicken chunks, crispy strips, mozzarella cheese, fries, and house sauce.",
     price: 650,
-    image: "/images/chicken-wrap.jpg",
+    image: "/images/food/wrap-special.jpg",
     badge: "House Signature",
     isSignature: true,
   },
@@ -439,7 +439,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "wraps",
     description: "Royal Mughlai spiced chicken breast cooked in aromatic cashew-cream sauce rolled in a warm toasted tortilla with crunchy greens.",
     price: 680,
-    image: "/images/chicken-wrap.jpg",
+    image: "/images/food/wrap-mughlai.jpg",
     badge: "Royal Taste",
   },
   {
@@ -448,7 +448,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "wraps",
     description: "Fiery crispy chicken zinger tenders, spicy garlic mayo, lettuce, and diced tomatoes wrapped to perfection.",
     price: 550,
-    image: "/images/chicken-wrap.jpg",
+    image: "/images/food/wrap-zinger.jpg",
     isBestSeller: true,
   },
   {
@@ -457,7 +457,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "wraps",
     description: "Flame-seared tender chicken strips with BBQ dressing, caramelized onions, and crisp peppers.",
     price: 600,
-    image: "/images/chicken-wrap.jpg",
+    image: "/images/food/wrap-grill.jpg",
   },
 
   // ===================== PARATHA ROLL =====================
@@ -467,7 +467,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "paratha-rolls",
     description: "Golden flaky paratha loaded with grilled chicken boti, Seekh kabab, melted cheese, and signature mint-garlic chutney.",
     price: 500,
-    image: "/images/chicken-wrap.jpg",
+    image: "/images/food/paratha-special.jpg",
     badge: "House Special",
     isSignature: true,
   },
@@ -477,7 +477,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "paratha-rolls",
     description: "Crispy crispy paratha stuffed with pizza sauce, mozzarella cheese pull, chicken tikka cubes, and oregano.",
     price: 500,
-    image: "/images/chicken-wrap.jpg",
+    image: "/images/food/paratha-pizza.jpg",
     badge: "Cheese Pull",
   },
   {
@@ -486,7 +486,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "paratha-rolls",
     description: "Spicy crunchy zinger fillet rolled inside a hot golden tandoori paratha with garlic sauce and onions.",
     price: 480,
-    image: "/images/chicken-wrap.jpg",
+    image: "/images/food/paratha-zinger.jpg",
     isBestSeller: true,
   },
   {
@@ -495,7 +495,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "paratha-rolls",
     description: "Smoky BBQ chicken boti wrapped in crispy butter paratha with tangy onion slaw and green chutney.",
     price: 480,
-    image: "/images/chicken-wrap.jpg",
+    image: "/images/food/paratha-grill.jpg",
   },
   {
     id: "kabab-paratha",
@@ -503,7 +503,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "paratha-rolls",
     description: "Freshly roasted spiced Seekh kabab rolled inside flaky paratha with sliced red onions and zesty chutney.",
     price: 400,
-    image: "/images/chicken-wrap.jpg",
+    image: "/images/food/paratha-kabab.jpg",
   },
   {
     id: "chicken-paratha",
@@ -511,7 +511,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "paratha-rolls",
     description: "Classic marinated chicken cubes rolled with garlic mayo and crisp cabbage in golden paratha.",
     price: 380,
-    image: "/images/chicken-wrap.jpg",
+    image: "/images/food/paratha-chicken.jpg",
   },
 
   // ===================== SANDWICH =====================
@@ -521,7 +521,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "sandwiches",
     description: "New Arrival! Toasted bread layered with succulent beef cuts, melted cheese slice, mustard mayo, and crisp lettuce.",
     price: 750,
-    image: "/images/club-sandwich.jpg",
+    image: "/images/food/sandwich-beef.jpg",
     badge: "New Arrival",
     isSignature: true,
   },
@@ -531,7 +531,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "sandwiches",
     description: "Triple-layer toasted sandwich stuffed with smoky grilled chicken fillet, fried egg, cheese, and spicy garlic dressing.",
     price: 520,
-    image: "/images/club-sandwich.jpg",
+    image: "/images/food/sandwich-grill.jpg",
     badge: "Best Seller",
     isBestSeller: true,
   },
@@ -541,7 +541,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "sandwiches",
     description: "Traditional 3-tier club sandwich with seasoned shredded chicken, farm egg, fresh cucumber, tomato, and creamy mayonnaise.",
     price: 370,
-    image: "/images/club-sandwich.jpg",
+    image: "/images/food/sandwich-club.jpg",
   },
 
   // ===================== PASTA & DONNER =====================
@@ -551,7 +551,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "pasta-fries",
     description: "Penne pasta tossed in rich cheesy Alfredo and fiery arrabbiata sauce, loaded with grilled chicken chunks, olives, and melted mozzarella.",
     price: 470,
-    image: "/images/creamy-pasta.jpg",
+    image: "/images/food/pasta-special.jpg",
     badge: "Chef Special",
     isSignature: true,
   },
@@ -561,7 +561,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "pasta-fries",
     description: "Cheesy saucy pasta crowned with crispy golden fried zinger bites and sprinkled with parmesan and chili flakes.",
     price: 470,
-    image: "/images/creamy-pasta.jpg",
+    image: "/images/food/pasta-crunchy.jpg",
     badge: "Zinger Crunch",
   },
   {
@@ -570,7 +570,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "pasta-fries",
     description: "Authentic Turkish style donner box loaded with seasoned chicken, golden fries, cabbage slaw, and white garlic drizzle.",
     price: 600,
-    image: "/images/loaded-fries.jpg",
+    image: "/images/food/donner-box.jpg",
     badge: "Turkish Style",
     isSignature: true,
   },
@@ -582,7 +582,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "pasta-fries",
     description: "Mountain of golden crispy fries smothered in melted cheddar cheese sauce, grilled chicken bits, jalapeños, and secret sauce.",
     price: 650,
-    image: "/images/loaded-fries.jpg",
+    image: "/images/food/fries-cheese-loaded.jpg",
     badge: "Cheese Overload",
     isBestSeller: true,
   },
@@ -592,7 +592,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "pasta-fries",
     description: "Crispy skin-on french fries topped with minced spiced chicken, tangy mayo-garlic dressing, and chili flakes.",
     price: 520,
-    image: "/images/loaded-fries.jpg",
+    image: "/images/food/fries-loaded.jpg",
     isBestSeller: true,
   },
   {
@@ -601,7 +601,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "pasta-fries",
     description: "Crispy golden fries tossed in aromatic roasted garlic butter and fresh herbs.",
     price: 270,
-    image: "/images/loaded-fries.jpg",
+    image: "/images/food/fries-garlic.jpg",
   },
   {
     id: "plain-fries",
@@ -609,7 +609,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "pasta-fries",
     description: "Hot, salted, extra-crunchy golden potato fries served with ketchup and spicy dip.",
     price: 220,
-    image: "/images/loaded-fries.jpg",
+    image: "/images/food/fries-plain.jpg",
   },
   {
     id: "chicken-nuggets",
@@ -617,7 +617,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "pasta-fries",
     description: "5 pieces of tender chicken breast nuggets in a crispy golden crumb coating.",
     price: 250,
-    image: "/images/gallery-wings.jpg",
+    image: "/images/food/chicken-nuggets.jpg",
   },
 
   // ===================== STEAK & GRILL FISH =====================
@@ -627,7 +627,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "steaks-fish",
     description: "Tender grilled whole chicken breast steak served sizzling with mushroom or black pepper sauce, mashed potatoes, and sautéed vegetables.",
     price: 850,
-    image: "/images/gallery-chef.jpg",
+    image: "/images/food/steak-chicken.jpg",
     badge: "Sizzler Special",
     isSignature: true,
   },
@@ -637,7 +637,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "steaks-fish",
     description: "Fresh boneless fish fillet marinated in authentic Lahori-Kasuri spices and herbs, slow grilled over live coal fire to juicy perfection.",
     price: 1700,
-    image: "/images/fried-fish.jpg",
+    image: "/images/food/fish-grill.jpg",
     badge: "Winter & Seafood Highlight",
     isSignature: true,
   },
@@ -653,7 +653,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half (1 Pc)", price: 90 },
       { name: "Full (2 Pcs)", price: 180 },
     ],
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-chicken-kabab.jpg",
     badge: "BBQ Classic",
     isBestSeller: true,
   },
@@ -667,7 +667,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half (1 Pc)", price: 120 },
       { name: "Full (2 Pcs)", price: 240 },
     ],
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-beef-kabab.jpg",
     badge: "Desi Favorite",
   },
   {
@@ -680,7 +680,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half (1 Pc)", price: 130 },
       { name: "Full (2 Pcs)", price: 260 },
     ],
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-reshmi-kabab.jpg",
     badge: "Melt In Mouth",
   },
   {
@@ -689,7 +689,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "bbq",
     description: "Spicy spherical dumplings of spiced meat grilled over charcoal with smoky undertones.",
     price: 150,
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-gola-kabab.jpg",
   },
   {
     id: "chicken-tikka-bbq",
@@ -697,7 +697,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "bbq",
     description: "Succulent quarter chicken piece steeped in fiery red yogurt marinade and roasted over glowing coals.",
     price: 180,
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-chicken-tikka.jpg",
     badge: "Tikka Special",
     isBestSeller: true,
   },
@@ -707,7 +707,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "bbq",
     description: "Tender boneless chicken cubes marinated in thick clotted cream, white pepper, lemon, and cardamom.",
     price: 350,
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-malai-boti.jpg",
     badge: "Creamy & Mild",
     isSignature: true,
   },
@@ -717,7 +717,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "bbq",
     description: "Juicy chicken drumstick and thigh quarter marinated with secret Top Taste masala.",
     price: 300,
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-chicken-leg.jpg",
   },
   {
     id: "chicken-chest-piece",
@@ -725,7 +725,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "bbq",
     description: "Meat lovers' favorite tender chicken breast quarter seared over embers.",
     price: 350,
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-chicken-chest.jpg",
   },
   {
     id: "chicken-wings-bbq",
@@ -733,7 +733,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "bbq",
     description: "Glazed and skewered chicken wings roasted until crisp outside and juicy inside.",
     price: 280,
-    image: "/images/gallery-wings.jpg",
+    image: "/images/food/bbq-chicken-wings.jpg",
   },
   {
     id: "chicken-green-boti",
@@ -741,7 +741,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "bbq",
     description: "Boneless chicken marinated with crushed mint, fresh coriander, green chilies, and lemon juice.",
     price: 300,
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-green-boti.jpg",
     badge: "Hariyali Flavor",
   },
   {
@@ -750,7 +750,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "bbq",
     description: "Juicy chicken Seekh kabab stuffed with gooey melted cheese core.",
     price: 160,
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-cheese-kabab.jpg",
   },
   {
     id: "chicken-kastori-boti",
@@ -758,7 +758,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "bbq",
     description: "Aromatic chicken boti infused with crushed roasted fenugreek leaves (kasuri methi) and saffron spices.",
     price: 350,
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-kastori-boti.jpg",
   },
   {
     id: "chicken-drumstick-bbq",
@@ -766,7 +766,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "bbq",
     description: "Crisp and juicy coal-roasted drumstick coated in sweet & spicy BBQ marinade.",
     price: 400,
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-drumsticks.jpg",
   },
 
   // ===================== KARAHI SPECIAL =====================
@@ -780,7 +780,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Karahi", price: 950 },
       { name: "Full Karahi", price: 1800 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/karahi-special-chicken.jpg",
     badge: "House Specialty",
     isSignature: true,
     isBestSeller: true,
@@ -795,7 +795,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Karahi", price: 850 },
       { name: "Full Karahi", price: 1600 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/karahi-chicken.jpg",
     isBestSeller: true,
   },
   {
@@ -808,7 +808,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Karahi", price: 900 },
       { name: "Full Karahi", price: 1700 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/karahi-white-chicken.jpg",
     badge: "Mild & Creamy",
   },
   {
@@ -821,7 +821,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Karahi", price: 950 },
       { name: "Full Karahi", price: 1800 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/karahi-shanwari.jpg",
     badge: "Peshawari Style",
   },
   {
@@ -834,7 +834,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Karahi", price: 2200 },
       { name: "Full Karahi", price: 4000 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/karahi-mutton.jpg",
     badge: "Pure Mutton",
     isSignature: true,
   },
@@ -848,7 +848,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Karahi", price: 2400 },
       { name: "Full Karahi", price: 4300 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/karahi-special-mutton.jpg",
     badge: "Royal Feast",
   },
   {
@@ -861,7 +861,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Karahi", price: 1700 },
       { name: "Full Karahi", price: 3200 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/karahi-beef.jpg",
   },
   {
     id: "special-beef-karahi",
@@ -873,7 +873,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Karahi", price: 1900 },
       { name: "Full Karahi", price: 3400 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/karahi-beef.jpg",
   },
   {
     id: "mutton-namkeen-karahi",
@@ -885,7 +885,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Karahi", price: 2000 },
       { name: "Full Karahi", price: 3700 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/karahi-namkeen.jpg",
   },
 
   // ===================== HANDI SPECIAL =====================
@@ -899,7 +899,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Handi", price: 850 },
       { name: "Full Handi", price: 1700 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/handi-special.jpg",
     badge: "Claypot Magic",
     isSignature: true,
     isBestSeller: true,
@@ -914,7 +914,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Handi", price: 750 },
       { name: "Full Handi", price: 1500 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/handi-chicken.jpg",
   },
   {
     id: "chicken-kabab-masala-handi",
@@ -926,7 +926,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Handi", price: 900 },
       { name: "Full Handi", price: 1800 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/handi-kabab-masala.jpg",
     badge: "Fusion Gravy",
   },
   {
@@ -939,7 +939,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Handi", price: 800 },
       { name: "Full Handi", price: 1400 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/handi-mughlai.jpg",
   },
   {
     id: "chicken-makhni-handi",
@@ -951,7 +951,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Handi", price: 800 },
       { name: "Full Handi", price: 1400 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/handi-makhni.jpg",
   },
   {
     id: "chicken-achari-handi",
@@ -963,7 +963,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Handi", price: 800 },
       { name: "Full Handi", price: 1400 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/handi-achari.jpg",
   },
   {
     id: "chicken-jalferazi",
@@ -975,7 +975,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Handi", price: 800 },
       { name: "Full Handi", price: 1400 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/handi-jalfrezi.jpg",
   },
   {
     id: "chicken-ginger-handi",
@@ -987,7 +987,7 @@ export const MENU_ITEMS: MenuItem[] = [
       { name: "Half Handi", price: 800 },
       { name: "Full Handi", price: 1400 },
     ],
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/handi-ginger.jpg",
   },
 
   // ===================== ROTI & NAAN =====================
@@ -997,7 +997,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "roti-naan",
     description: "Fluffy tandoori leavened bread brushed with clarified butter and sprinkled with toasted sesame seeds.",
     price: 40,
-    image: "/images/sitting-area-2.jpg",
+    image: "/images/food/naan-roghni.jpg",
     badge: "Must Have",
   },
   {
@@ -1006,7 +1006,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "roti-naan",
     description: "Tandoor baked naan topped with crushed roasted garlic butter and fresh cilantro.",
     price: 60,
-    image: "/images/sitting-area-2.jpg",
+    image: "/images/food/naan-garlic.jpg",
   },
   {
     id: "kalwanji-naan",
@@ -1014,7 +1014,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "roti-naan",
     description: "Soft buttered naan sprinkled with beneficial black kalonji seeds.",
     price: 60,
-    image: "/images/sitting-area-2.jpg",
+    image: "/images/food/naan-kalwanji.jpg",
   },
   {
     id: "tandori-paratha",
@@ -1022,7 +1022,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "roti-naan",
     description: "Crispy layered whole wheat tandoor paratha laced with pure desi butter.",
     price: 80,
-    image: "/images/sitting-area-2.jpg",
+    image: "/images/food/paratha-tandoori.jpg",
   },
   {
     id: "sada-naan",
@@ -1030,7 +1030,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "roti-naan",
     description: "Traditional hot clay-oven baked plain naan bread.",
     price: 30,
-    image: "/images/sitting-area-2.jpg",
+    image: "/images/food/naan-sada.jpg",
   },
   {
     id: "khameri-roti",
@@ -1038,7 +1038,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "roti-naan",
     description: "Light, airy yeast-fermented tandoori roti.",
     price: 30,
-    image: "/images/sitting-area-2.jpg",
+    image: "/images/food/roti-tandoori.jpg",
   },
   {
     id: "sada-roti",
@@ -1046,7 +1046,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "roti-naan",
     description: "Fresh wholesome tandoori wheat roti.",
     price: 20,
-    image: "/images/sitting-area-2.jpg",
+    image: "/images/food/roti-tandoori.jpg",
   },
   {
     id: "fresh-salad",
@@ -1054,7 +1054,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "roti-naan",
     description: "Sliced onions, cucumbers, tomatoes, and lemon wedges.",
     price: 50,
-    image: "/images/sitting-area-2.jpg",
+    image: "/images/food/fresh-salad.jpg",
   },
   {
     id: "zeera-raita",
@@ -1062,7 +1062,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "roti-naan",
     description: "Cooling spiced curd seasoned with roasted cumin and fresh mint leaves.",
     price: 50,
-    image: "/images/sitting-area-2.jpg",
+    image: "/images/food/raita-zeera.jpg",
   },
 
   // ===================== DRINKS & EXTRAS =====================
@@ -1072,7 +1072,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "drinks-extras",
     description: "Large 1.5 Litre chilled party drink (Pepsi, 7Up, Mirinda, or Dew).",
     price: 250,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/drink-soft.jpg",
     badge: "Family Size",
   },
   {
@@ -1081,7 +1081,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "drinks-extras",
     description: "500ml ice-cold bottle (Pepsi, 7Up, Dew, or Mirinda).",
     price: 140,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/drink-soft.jpg",
   },
   {
     id: "soft-drink-350",
@@ -1089,7 +1089,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "drinks-extras",
     description: "Single-serve cold soft drink bottle.",
     price: 90,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/drink-soft.jpg",
   },
   {
     id: "mineral-water-1500",
@@ -1097,7 +1097,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "drinks-extras",
     description: "1.5 Litre chilled pure bottled mineral water.",
     price: 120,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/water-pure.jpg",
   },
   {
     id: "mineral-water-500",
@@ -1105,7 +1105,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "drinks-extras",
     description: "500ml bottle pure mineral water.",
     price: 60,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/water-pure.jpg",
   },
   {
     id: "extra-pita-bread",
@@ -1113,7 +1113,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "drinks-extras",
     description: "Warm, soft Arabic shawarma pita bread.",
     price: 40,
-    image: "/images/shawarma.jpg",
+    image: "/images/food/pita-bread.jpg",
   },
   {
     id: "extra-zinger-pc",
@@ -1121,7 +1121,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "drinks-extras",
     description: "Extra freshly fried crispy chicken zinger piece.",
     price: 160,
-    image: "/images/zinger-burger.jpg",
+    image: "/images/food/extra-crispy-chicken.jpg",
   },
   {
     id: "extra-zinger-thai-pc",
@@ -1129,7 +1129,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "drinks-extras",
     description: "Jumbo crispy chicken thigh fillet piece.",
     price: 320,
-    image: "/images/zinger-burger.jpg",
+    image: "/images/food/extra-crispy-chicken.jpg",
   },
   {
     id: "extra-chicken-portion",
@@ -1137,7 +1137,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "drinks-extras",
     description: "Extra 100g portion of shredded grilled shawarma chicken.",
     price: 100,
-    image: "/images/shawarma.jpg",
+    image: "/images/food/shawarma-chicken.jpg",
   },
   {
     id: "extra-cheese-slice",
@@ -1145,7 +1145,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "drinks-extras",
     description: "Rich cheddar or mozzarella cheese slice.",
     price: 70,
-    image: "/images/smash-burger.jpg",
+    image: "/images/food/pizza-cheese.jpg",
   },
   {
     id: "extra-signature-sauce",
@@ -1153,7 +1153,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "drinks-extras",
     description: "Pot of Top Taste secret white garlic or spicy mayo sauce.",
     price: 70,
-    image: "/images/shawarma.jpg",
+    image: "/images/food/extra-sauces.jpg",
   },
 ];
 
@@ -1164,7 +1164,7 @@ export const DEALS: DealItem[] = [
     price: 499,
     description: "The ideal on-the-go quick bite: 1 Top Taste Special Shawarma, a small portion of crispy fries, and 1 chilled 350ml soft drink.",
     badge: "Quick Solo Bite",
-    image: "/images/shawarma.jpg",
+    image: "/images/food/shawarma-special.jpg",
     serves: "1 Person",
     items: [
       "1 Top Taste Special Shawarma",
@@ -1178,7 +1178,7 @@ export const DEALS: DealItem[] = [
     price: 750,
     description: "Best of both worlds: 1 Crispy Zinger Burger, 1 Chicken Shawarma, crispy garlic fries, and 1 cold drink.",
     badge: "Best Seller",
-    image: "/images/hero-food.jpg",
+    image: "/images/food/burger-zinger.jpg",
     serves: "2 Persons",
     items: [
       "1 Crispy Zinger Burger",
@@ -1193,7 +1193,7 @@ export const DEALS: DealItem[] = [
     price: 1650,
     description: "Feast with friends! 1 Medium Crown Crust Pizza, 1 Top Taste Special Shawarma, 1 Loaded Cheese Fries, and 2 chilled drinks.",
     badge: "Crown Favorite",
-    image: "/images/deal-feast.jpg",
+    image: "/images/food/pizza-crown-crust.jpg",
     serves: "3 - 4 Persons",
     items: [
       "1 Medium Crown Crust Pizza (Any Flavor)",
@@ -1208,7 +1208,7 @@ export const DEALS: DealItem[] = [
     price: 2999,
     description: "The ultimate dining celebration: 1 Large Top Taste Special Pizza, 2 Chicken Shawarmas, 1 Half Chicken Handi Special, 3 Roghni Naans, and 1.5L drink.",
     badge: "Ultimate Family Banquet",
-    image: "/images/deal-feast.jpg",
+    image: "/images/food/karahi-special-chicken.jpg",
     serves: "5 - 6 Persons",
     items: [
       "1 Large Top Taste Special Pizza",
@@ -1376,36 +1376,36 @@ export const GALLERY_IMAGES = [
   {
     title: "Mouth-Watering Roasted Chicken Shawarma",
     category: "Shawarma Specialty",
-    image: "/images/shawarma.jpg",
+    image: "/images/food/shawarma-special.jpg",
   },
   {
     title: "Sizzling Crown Crust & Special Pizza",
     category: "Pizza Corner",
-    image: "/images/special-pizza.jpg",
+    image: "/images/food/pizza-crown-crust.jpg",
   },
   {
     title: "Authentic Desi Chicken & Mutton Karahi",
     category: "Desi Kitchen",
-    image: "/images/gallery-feast.jpg",
+    image: "/images/food/karahi-special-chicken.jpg",
   },
   {
     title: "Live Coal Charcoal BBQ Kababs & Tikka",
     category: "Bar-B-Q",
-    image: "/images/gallery-dining.jpg",
+    image: "/images/food/bbq-chicken-tikka.jpg",
   },
   {
-    title: "Top Taste Shawarma Outlet Kasur",
-    category: "Restaurant Storefront",
+    title: "Top Taste Shawarma Storefront Kasur",
+    category: "Storefront",
     image: "/images/toptaste/shop-1.jpg",
   },
   {
-    title: "Kasur Dining & Evening Rush Ambience",
+    title: "Kasur Dining & Evening Ambience",
     category: "Ambience",
     image: "/images/toptaste/shop-2.jpg",
   },
   {
-    title: "Chef Live Tawa & Sizzling Preparation",
-    category: "Live Kitchen",
-    image: "/images/gallery-chef.jpg",
+    title: "Cheesy Stuffed Crust Pizza Pull",
+    category: "Cheese Pull",
+    image: "/images/food/pizza-cheese-lover.jpg",
   },
 ];
