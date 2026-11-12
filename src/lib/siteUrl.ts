@@ -11,7 +11,7 @@ export function getSiteUrl(): string {
   if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
     return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
   }
-  return "https://toptaste-cyan.vercel.app";
+  return "https://toptasteshawarma.vercel.app";
 }
 
 export const SITE_URL = getSiteUrl();
