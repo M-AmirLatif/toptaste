@@ -75,8 +75,8 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${SITE_URL}/images/og-image.jpg`,
-        secureUrl: `${SITE_URL}/images/og-image.jpg`,
+        url: `${SITE_URL}/images/toptaste-share-card.jpg?v=3`,
+        secureUrl: `${SITE_URL}/images/toptaste-share-card.jpg?v=3`,
         width: 1200,
         height: 630,
         type: "image/jpeg",
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Top Taste Shawarma & Pizza Kasur",
     description: "Special Shawarma, Crown Crust Pizza, Desi Karahi, BBQ & Free Home Delivery across Kasur.",
-    images: [`${SITE_URL}/images/og-image.jpg`],
+    images: [`${SITE_URL}/images/toptaste-share-card.jpg?v=3`],
   },
 };
 
@@ -171,14 +171,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${lilita.variable} ${plusJakarta.variable}`}>
       <head>
-        <meta property="og:image" content={`${SITE_URL}/images/og-image.jpg`} />
-        <meta property="og:image:secure_url" content={`${SITE_URL}/images/og-image.jpg`} />
+        <meta property="og:image" content={`${SITE_URL}/images/toptaste-share-card.jpg?v=3`} />
+        <meta property="og:image:secure_url" content={`${SITE_URL}/images/toptaste-share-card.jpg?v=3`} />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Top Taste Shawarma & Pizza Kasur" />
-        <meta name="twitter:image" content={`${SITE_URL}/images/og-image.jpg`} />
-        <link rel="image_src" href={`${SITE_URL}/images/og-image.jpg`} />
+        <meta name="twitter:image" content={`${SITE_URL}/images/toptaste-share-card.jpg?v=3`} />
+        <link rel="image_src" href={`${SITE_URL}/images/toptaste-share-card.jpg?v=3`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

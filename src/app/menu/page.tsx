@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${SITE_URL}/images/og-image.jpg`,
-        secureUrl: `${SITE_URL}/images/og-image.jpg`,
+        url: `${SITE_URL}/images/toptaste-share-card.jpg?v=3`,
+        secureUrl: `${SITE_URL}/images/toptaste-share-card.jpg?v=3`,
         width: 1200,
         height: 630,
         type: "image/jpeg",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Top Taste Shawarma & Pizza Menu | Kasur",
     description:
       "Kasur's Landmark: Special Shawarma, Crown Crust Pizza, Desi Karahi & Free Home Delivery.",
-    images: [`${SITE_URL}/images/og-image.jpg`],
+    images: [`${SITE_URL}/images/toptaste-share-card.jpg?v=3`],
   },
 };
 
