@@ -47,13 +47,9 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-20 sm:pt-24 pb-8 sm:pb-16 overflow-hidden bg-gradient-to-b from-[#FEF3C7]/60 via-[#FCFBF7] to-[#FCFBF7]"
+      className="relative pt-20 sm:pt-24 pb-8 sm:pb-16 overflow-hidden bg-[#FAF9F5]"
       aria-label="Hero Introduction"
     >
-      {/* Decorative Warm Backdrops */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[650px] h-[360px] bg-[#F59E0B]/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-36 right-10 w-[320px] h-[320px] bg-[#E11D48]/15 rounded-full blur-3xl pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
           {/* Left Column: Copy, Typing Headline & CTAs */}
@@ -86,11 +82,11 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Badges Bar: Fluid flex-wrap pill buttons that never overlap or clip */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1 max-w-xl mx-auto lg:mx-0">
+            {/* Badges Bar: Symmetrical and perfectly aligned with matching width on mobile, fluid on desktop */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 pt-1 w-full max-w-[285px] sm:max-w-none mx-auto lg:mx-0">
               {/* Live Hours Badge */}
               <div
-                className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold shadow-sm ${
+                className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full text-xs font-extrabold shadow-sm ${
                   status.isOpen
                     ? "bg-emerald-50 text-emerald-900 border border-emerald-300"
                     : "bg-amber-50 text-amber-900 border border-amber-300"
@@ -105,7 +101,7 @@ export function Hero() {
                 href={RESTAURANT_INFO.directionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#F59E0B] text-xs font-bold text-[#0F172A] shadow-sm hover:bg-[#FEF3C7]/40 transition-colors"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white border border-[#F59E0B] text-xs font-bold text-[#0F172A] shadow-sm hover:bg-[#FEF3C7]/40 transition-colors"
               >
                 <Star className="w-3.5 h-3.5 fill-[#F59E0B] text-[#F59E0B] shrink-0" />
                 <span className="font-extrabold text-[#E11D48]">4.0</span>
@@ -115,7 +111,7 @@ export function Hero() {
               </a>
 
               {/* Free Delivery Chip */}
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#E11D48] text-white text-xs font-bold shadow-sm">
+              <div className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[#E11D48] text-white text-xs font-bold shadow-sm">
                 <Truck className="w-3.5 h-3.5 text-[#FBBF24] shrink-0" />
                 <span>Free Delivery (Min Rs 600)</span>
               </div>
@@ -129,7 +125,7 @@ export function Hero() {
               <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-display text-[#0F172A] leading-[1.12] sm:leading-[1.08] tracking-tight">
                 Fresh, Flavorful &amp; Famous{" "}
                 <span className="relative inline-block text-[#E11D48]">
-                  <span className="text-[#E11D48] drop-shadow-sm">
+                  <span className="text-[#E11D48]">
                     {currentText}
                   </span>
                   {!isReducedMotion && (
