@@ -1,29 +1,32 @@
-# Master Burger Point — Official Restaurant Website & Ordering Platform
+# Top Taste Shawarma & Pizza — Official Website & Ordering Platform
 
-> **"The Oldest & Best Burger Shop in Kasur"**  
-> High-converting web application for **Master Burger Point** located at Chandni Chowk, Railway Road, near Raja Centre, Kasur, 55050, Pakistan.
+> **"Kasur's Iconic Shawarma, Crown Crust Pizza, Karahi & BBQ Landmark"**  
+> High-converting web application for **Top Taste Shawarma & Pizza** located opposite Mori Gate, Baldia Chowk, Kasur, Pakistan.
 
 ---
 
 ## 🌟 Overview & Highlights
 
-This project is a bespoke, production-grade restaurant web application designed to showcase Master Burger Point's legendary menu and drive direct dine-in, takeaway, and late-night delivery orders.
+This project is a bespoke, production-grade restaurant web application designed to showcase Top Taste's full dining menu and drive direct dine-in, takeaway, drive-through, and free home delivery orders.
 
-- **Restaurant:** Master Burger Point (ماسٹر برگر پوائنٹ)
-- **Rating:** 4.1 ★ (24 Google Reviews)
-- **Address:** Chandni Chowk, Railway Road, near Raja Centre, Kasur, 55050, Pakistan
-- **Phone / WhatsApp:** +92 301 6821483 / 0301-6821483
-- **Operating Hours:** 12:00 PM – 4:00 AM Daily (Open till 4 AM)
-- **Service Options:** Dine-in, Takeout, Late-Night Delivery
+- **Restaurant:** Top Taste Shawarma & Pizza (ٹاپ ٹیسٹ شوارما اینڈ پیزا)
+- **Google Rating:** 4.0 ★ (272 Google Reviews)
+- **Price Range:** Rs 1–1,000 per person
+- **Address:** Opp. Mori Gate Baldia Chowk, Noor Masjid Rd, Tariq Colony, Kasur, Pakistan
+- **Plus Code:** 4F93+V8G Kasur, Pakistan
+- **Phone / WhatsApp:** 0321-6592546 / 0304-0444496
+- **Operating Hours:** 1:00 PM – 1:00 AM Daily
+- **Delivery Policy:** Free Home Delivery on minimum orders of Rs 600/- across Kasur
+- **Service Options:** Dine-in, Takeout, Drive-through, Home Delivery
 
 ### Signature Dishes
-1. **Special Master Burger** (Double patty, cheese, farm-fresh egg, signature sauce)
-2. **Bun Plaster Burger** (Kasur's iconic classic street-style plaster burger)
-3. **Zinger & Grill Cheese Burgers**
-4. **Chicken & Zinger Shawarma & Mix Platters**
-5. **Zinger Cheese Paratha Rolls**
-6. **Golu Molu Club Sandwiches** (Triple-layered monster club)
-7. **Injected Broast & Cheese Loaded Fries**
+1. **Top Taste Special Shawarma & Platters** (Juicy spiced chicken, melted cheese, secret garlic dip)
+2. **Crown Crust Royal Pizza & Lazania Pizza** (Stuffed kabab bites, double mozzarella)
+3. **Desi Special Chicken & Mutton Karahi** (Cast iron wok braised with desi tomatoes & ginger)
+4. **Chicken Handi Special** (Claypot simmered with butter and cashew gravy)
+5. **Flame-Grilled Beef Burger & Pizza Burger** (100% prime patties & pizza marinara sauce)
+6. **Live Coal BBQ Kababs, Tikka & Malai Boti**
+7. **Special Charcoal Grill Fish & Chicken Steak**
 
 ---
 
@@ -40,7 +43,7 @@ npm run dev
 http://localhost:3000
 ```
 
-### Production Build Test
+### Production Build
 ```powershell
 npm run build
 npm run start

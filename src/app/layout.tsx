@@ -22,7 +22,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#FFC20E",
+  themeColor: "#E11D48",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -30,24 +30,25 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Master Burger Point | The Oldest & Best Burger Shop in Kasur",
+  title: "Top Taste Shawarma & Pizza | Kasur's Famous Food Landmark",
   description:
-    "Master Burger Point (ماسٹر برگر پوائنٹ) — Kasur's oldest and most famous burger spot on Railway Road, Chandni Chowk. Famous for Special Master Burgers, Bun Plaster, Zinger, Chicken Shawarma, Paratha Rolls & Club Sandwiches. Dine-in, Takeout & Delivery till 4 AM.",
+    "Top Taste Shawarma & Pizza (ٹاپ ٹیسٹ شوارما اینڈ پیزا) — Kasur's celebrated dining & takeout destination opposite Mori Gate, Baldia Chowk. Savor Special Chicken Shawarma, Crown Crust Pizza, Karahi, Handi, BBQ, Steaks & Burgers. Free Home Delivery on orders Rs 600+ across Kasur.",
   keywords: [
-    "Master Burger Point",
-    "Master Burger Kasur",
-    "Oldest Burger Shop in Kasur",
-    "Best Burger in Kasur",
-    "Bun Plaster Kasur",
-    "Railway Road Kasur food",
-    "Chandni Chowk Kasur burger",
-    "Zinger Burger Kasur",
-    "Shawarma Kasur",
-    "Late night delivery Kasur 4 AM",
+    "Top Taste Shawarma",
+    "Top Taste Pizza Kasur",
+    "Best Shawarma in Kasur",
+    "Crown Crust Pizza Kasur",
+    "Baldia Chowk Kasur restaurant",
+    "Mori Gate Kasur food",
+    "Chicken Shawarma Kasur",
+    "Desi Karahi Handi Kasur",
+    "Charcoal BBQ Kasur",
+    "Late night food Kasur 1 AM",
+    "Free delivery Kasur food",
   ],
-  authors: [{ name: "Master Burger Point" }],
-  creator: "Master Burger Point",
-  publisher: "Master Burger Point",
+  authors: [{ name: "Top Taste Shawarma & Pizza" }],
+  creator: "Top Taste Shawarma & Pizza",
+  publisher: "Top Taste Shawarma & Pizza",
   formatDetection: {
     telephone: true,
     address: true,
@@ -65,11 +66,11 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.webmanifest",
   openGraph: {
-    title: "Master Burger Point | The Oldest & Best Burger Shop in Kasur",
+    title: "Top Taste Shawarma & Pizza | Kasur's Famous Food Landmark",
     description:
-      "Kasur's legendary burger destination on Railway Road! Special Master Burger, Bun Plaster, Zinger, Shawarma, Club Sandwiches & Injected Broast. Open daily 12 PM till 4 AM.",
+      "Kasur's premier Shawarma, Pizza, Karahi & BBQ spot at Baldia Chowk. Special Shawarma, Crown Crust Pizza, Burgers, Handi & Free Home Delivery (Min Rs 600). Open daily 1 PM till 1 AM.",
     url: SITE_URL,
-    siteName: "Master Burger Point",
+    siteName: "Top Taste Shawarma & Pizza",
     locale: "en_PK",
     type: "website",
     images: [
@@ -79,14 +80,14 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         type: "image/jpeg",
-        alt: "Master Burger Point Kasur — The Oldest & Best Burger Shop",
+        alt: "Top Taste Shawarma & Pizza Kasur — Food Street Landmark",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Master Burger Point Kasur | The Oldest Burger Shop",
-    description: "Special Master Burgers, Bun Plaster, Shawarma & Late-Night Delivery till 4 AM.",
+    title: "Top Taste Shawarma & Pizza Kasur",
+    description: "Special Shawarma, Crown Crust Pizza, Desi Karahi, BBQ & Free Home Delivery across Kasur.",
     images: [`${SITE_URL}/images/og-image.jpg`],
   },
 };
@@ -105,11 +106,20 @@ export default function RootLayout({
     "@id": SITE_URL,
     url: SITE_URL,
     telephone: RESTAURANT_INFO.phonePrimary,
-    servesCuisine: ["Fast Food", "Burgers", "Shawarma", "Sandwiches", "Broast", "Pakistani Fast Food"],
-    priceRange: "$$",
+    servesCuisine: [
+      "Shawarma",
+      "Pizza",
+      "Fast Food",
+      "Pakistani BBQ",
+      "Karahi",
+      "Handi",
+      "Burgers",
+      "Seafood",
+    ],
+    priceRange: "Rs 1–1,000",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Chandni Chowk, Railway Road, near Raja Centre",
+      streetAddress: "Opp. Mori Gate Baldia Chowk, Noor Masjid Rd, Tariq Colony",
       addressLocality: "Kasur",
       addressRegion: "Punjab",
       addressCountry: "PK",
@@ -117,8 +127,8 @@ export default function RootLayout({
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 31.1165,
-      longitude: 74.4485,
+      latitude: 31.1196941,
+      longitude: 74.4533159,
     },
     openingHoursSpecification: [
       {
@@ -132,14 +142,14 @@ export default function RootLayout({
           "Saturday",
           "Sunday",
         ],
-        opens: "12:00",
-        closes: "04:00",
+        opens: "13:00",
+        closes: "01:00",
       },
     ],
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.1",
-      reviewCount: "24",
+      ratingValue: "4.0",
+      reviewCount: "272",
       bestRating: "5",
       worstRating: "1",
     },
@@ -161,13 +171,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${lilita.variable} ${plusJakarta.variable}`}>
       <head>
-        {/* Chat / WhatsApp / Social Crawlers Static Fallbacks */}
         <meta property="og:image" content={`${SITE_URL}/images/og-image.jpg`} />
         <meta property="og:image:secure_url" content={`${SITE_URL}/images/og-image.jpg`} />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Master Burger Point Kasur - The Oldest & Best Burger Shop" />
+        <meta property="og:image:alt" content="Top Taste Shawarma & Pizza Kasur" />
         <meta name="twitter:image" content={`${SITE_URL}/images/og-image.jpg`} />
         <link rel="image_src" href={`${SITE_URL}/images/og-image.jpg`} />
         <script
@@ -175,7 +184,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col pb-16 md:pb-0 bg-[#FFFDF7] text-[#231815] selection:bg-[#FFC20E] selection:text-[#730C0C]">
+      <body className="min-h-screen flex flex-col pb-16 md:pb-0 bg-[#FCFBF7] text-[#0F172A] selection:bg-[#F59E0B] selection:text-[#0F172A]">
         {children}
         <CartDrawer />
         <CartToast />

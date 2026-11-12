@@ -2,13 +2,13 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Master Burger Point - Kasur",
-    short_name: "Master Burger",
-    description: "Kasur's Oldest & Most Famous Burger Shop on Railway Road, Chandni Chowk.",
+    name: "Top Taste Shawarma & Pizza - Kasur",
+    short_name: "Top Taste",
+    description: "Kasur's Famous Shawarma, Crown Crust Pizza, Karahi, BBQ & Fast Food Landmark.",
     start_url: "/",
     display: "standalone",
-    background_color: "#120E0C",
-    theme_color: "#FFC20E",
+    background_color: "#0F172A",
+    theme_color: "#E11D48",
     icons: [
       {
         src: "/icon-192.png",

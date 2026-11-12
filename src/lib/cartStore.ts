@@ -97,15 +97,15 @@ export const useCartStore = create<CartStore>()(
         const toastDesc = sizeName ? `${name} (${sizeName})` : name;
         set({
           items: updatedItems,
-          toast: `Added ${toastDesc} to your cart! 🍔`,
+          toast: `Added ${toastDesc} to your order! 🌯🍕`,
         });
 
-        // Auto hide toast after 3s
+        // Auto-dismiss toast
         setTimeout(() => {
-          if (get().toast?.includes(name)) {
+          if (get().toast) {
             set({ toast: null });
           }
-        }, 3200);
+        }, 3000);
       },
 
       removeItem: (cartItemId) => {
@@ -119,6 +119,7 @@ export const useCartStore = create<CartStore>()(
           get().removeItem(cartItemId);
           return;
         }
+
         set({
           items: get().items.map((item) =>
             item.cartItemId === cartItemId ? { ...item, quantity } : item
@@ -126,22 +127,35 @@ export const useCartStore = create<CartStore>()(
         });
       },
 
-      clearCart: () => set({ items: [] }),
+      clearCart: () => {
+        set({ items: [] });
+      },
+
       openCart: () => set({ isOpen: true }),
       closeCart: () => set({ isOpen: false }),
       toggleCart: () => set({ isOpen: !get().isOpen }),
-      setCustomerAddress: (address) => set({ customerAddress: address }),
-      setOrderType: (type) => set({ orderType: type }),
-      showToast: (message) => set({ toast: message }),
+
+      setCustomerAddress: (customerAddress) => set({ customerAddress }),
+      setOrderType: (orderType) => set({ orderType }),
+
+      showToast: (toast) => {
+        set({ toast });
+        setTimeout(() => {
+          if (get().toast === toast) {
+            set({ toast: null });
+          }
+        }, 3000);
+      },
+
       hideToast: () => set({ toast: null }),
 
       getTotalCount: () => {
-        return get().items.reduce((total, item) => total + item.quantity, 0);
+        return get().items.reduce((acc, item) => acc + item.quantity, 0);
       },
 
       getSubtotal: () => {
         return get().items.reduce(
-          (total, item) => total + item.price * item.quantity,
+          (acc, item) => acc + item.price * item.quantity,
           0
         );
       },
@@ -149,6 +163,7 @@ export const useCartStore = create<CartStore>()(
       getDeliveryFee: () => {
         const subtotal = get().getSubtotal();
         if (get().orderType === "takeaway" || subtotal === 0) return 0;
+        // Free Home Delivery on Minimum Order Rs 600/-
         return subtotal >= RESTAURANT_INFO.minimumOrder ? 0 : 150;
       },
 
@@ -170,11 +185,11 @@ export const useCartStore = create<CartStore>()(
 
         if (items.length === 0) return RESTAURANT_INFO.whatsappUrl;
 
-        let message = `*🍔 MASTER BURGER POINT ORDER — KASUR 🍔*\n`;
-        message += `_The Oldest & Best Burger Shop in Kasur_\n`;
+        let message = `*🌯 TOP TASTE SHAWARMA & PIZZA — KASUR 🍕*\n`;
+        message += `_Dining & Take Away • Baldia Chowk, Kasur_\n`;
         message += `--------------------------------------\n`;
-        message += `*Order Type:* ${orderType === "delivery" ? "🚀 Home Delivery" : "🛍️ Takeaway / Pickup"}\n\n`;
-        message += `*ITEMS:*\n`;
+        message += `*Order Type:* ${orderType === "delivery" ? "🚀 Free Home Delivery" : "🛍️ Takeaway / Pickup"}\n\n`;
+        message += `*ORDER ITEMS:*\n`;
 
         items.forEach((item, index) => {
           let itemLine = `${index + 1}. *${item.quantity}x ${item.name}*`;
@@ -187,7 +202,7 @@ export const useCartStore = create<CartStore>()(
         message += `\n--------------------------------------\n`;
         message += `*Subtotal:* Rs ${subtotal.toLocaleString()}\n`;
         if (orderType === "delivery") {
-          message += `*Delivery:* ${deliveryFee === 0 ? "FREE (Order >= Rs 500)" : `Rs ${deliveryFee}`}\n`;
+          message += `*Delivery Fee:* ${deliveryFee === 0 ? "FREE (Order >= Rs 600)" : `Rs ${deliveryFee} (Free at Rs 600)`}\n`;
         }
         message += `*GRAND TOTAL: Rs ${finalTotal.toLocaleString()}*\n`;
         message += `--------------------------------------\n`;
@@ -195,10 +210,10 @@ export const useCartStore = create<CartStore>()(
         if (customerAddress.trim()) {
           message += `*Delivery Address / Notes:*\n${customerAddress.trim()}\n\n`;
         } else {
-          message += `*Customer Note:* Please share delivery address.\n\n`;
+          message += `*Customer Note:* Please send delivery address.\n\n`;
         }
 
-        message += `_Sent via Master Burger Point Official Website_ 🌟`;
+        message += `_Sent via Top Taste Shawarma & Pizza Official Website_ 🌟`;
 
         return `https://wa.me/${RESTAURANT_INFO.whatsappNumber}?text=${encodeURIComponent(
           message
@@ -206,7 +221,7 @@ export const useCartStore = create<CartStore>()(
       },
     }),
     {
-      name: "masterburger-cart-storage",
+      name: "toptaste-cart-storage",
       storage: createJSONStorage(() => localStorage),
       partialize: (state) => ({
         items: state.items,

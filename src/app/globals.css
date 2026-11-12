@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --brand-yellow: #FFC20E;
-  --brand-yellow-hover: #E5AC00;
-  --brand-maroon: #8B1A1A;
-  --brand-maroon-dark: #630F0F;
-  --brand-maroon-light: #A52222;
-  --brand-cream: #FFFDF7;
+  --brand-yellow: #F59E0B;
+  --brand-yellow-hover: #D97706;
+  --brand-yellow-light: #FEF3C7;
+  --brand-red: #E11D48;
+  --brand-red-dark: #BE123C;
+  --brand-red-light: #FFE4E6;
+  --brand-maroon: #991B1B;
+  --brand-maroon-dark: #7F1D1D;
+  --brand-cream: #FCFBF7;
   --brand-cream-card: #FFFFFF;
-  --brand-cream-surface: #FFF6DC;
-  --brand-dark: #141414;
-  --brand-charcoal: #231815;
-  --brand-muted: #5C4E4B;
+  --brand-cream-surface: #F8F4EB;
+  --brand-dark: #0F172A;
+  --brand-charcoal: #1E293B;
+  --brand-muted: #64748B;
 }
 
 html {
@@ -49,7 +52,7 @@ body {
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 28s linear infinite;
+  animation: marquee 26s linear infinite;
 }
 
 .animate-marquee:hover {
@@ -70,16 +73,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFF5D9;
+  background: #F8F4EB;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8B1A1A;
+  background: #E11D48;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #630F0F;
+  background: #BE123C;
 }
 
 /* Cheese Drip Divider SVG mask / pattern */
@@ -94,20 +97,14 @@ body {
   left: 0;
   right: 0;
   height: 14px;
-  background-image: radial-gradient(circle at 10px 0, #8B1A1A 10px, transparent 11px);
+  background-image: radial-gradient(circle at 10px 0, #E11D48 10px, transparent 11px);
   background-size: 20px 20px;
 }
 
-/* Glassmorphism Header */
-.glass-nav {
-  background: rgba(255, 253, 247, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1.5px solid rgba(139, 26, 26, 0.1);
-}
-
-/* Focus state accessible ring */
-*:focus-visible {
-  outline: 2px solid #8B1A1A;
-  outline-offset: 2px;
+/* Print styling */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
 }

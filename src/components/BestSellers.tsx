@@ -8,22 +8,23 @@ import { useCartStore } from "@/lib/cartStore";
 import { MENU_ITEMS, MenuItem } from "@/data/menu";
 import { SITE_URL } from "@/lib/siteUrl";
 
-// Filter the 6 featured signatures from Master Burger Point
+// 6 featured signature dishes of Top Taste Shawarma & Pizza
 const SIGNATURE_IDS = [
-  "special-master-burger",
-  "bun-plaster-burger",
-  "zinger-burger",
-  "zinger-chicken-mix-platter",
-  "golu-molu-club-sandwich",
-  "injected-broast",
+  "top-taste-special-shawarma",
+  "crown-crust-pizza",
+  "special-chicken-karahi",
+  "pizza-burger",
+  "chicken-platter-shawarma",
+  "beef-burger",
 ];
 
 const ITEM_HIGHLIGHTS: Record<string, string[]> = {
-  "special-master-burger": ["Double Juicy Patty", "Cheddar Cheese", "Farm Fresh Egg"],
-  "bun-plaster-burger": ["Kasuri Tawa Style", "Golden Egg Crust", "Tangy Chutney"],
-  "zinger-burger": ["Whole Chicken Fillet", "Fiery Crispy Batter", "Garlic Mayo"],
-  "zinger-chicken-mix-platter": ["Zinger & Roasted Chicken", "2 Pita Breads", "Garlic Dip & Fries"],
-  "golu-molu-club-sandwich": ["Triple Decker Jumbo", "Melted Cheese", "Fresh Salad Slaw"],
+  "top-taste-special-shawarma": ["Melted Cheese", "Spiced Loaded Chicken", "Signature Garlic Dip"],
+  "crown-crust-pizza": ["Crown Shaped Crust", "Stuffed Kabab Bites", "Double Mozzarella"],
+  "special-chicken-karahi": ["Fresh Desi Tomatoes", "Ginger Juliennes", "Desi Wok Butter"],
+  "pizza-burger": ["Pizza Marinara Sauce", "Melted Mozzarella", "Olives & Herbs"],
+  "chicken-platter-shawarma": ["Huge Chicken Mountain", "2 Pita Breads", "Fries & Garlic Dips"],
+  "beef-burger": ["100% Prime Grilled Beef", "Melted Cheddar", "Secret Sauce"],
 };
 
 export function BestSellers() {
@@ -34,11 +35,11 @@ export function BestSellers() {
   const handleShareItem = async (item: MenuItem, e: React.MouseEvent) => {
     e.stopPropagation();
     const url = typeof window !== "undefined" ? window.location.origin : SITE_URL;
-    const text = `Check out ${item.name} at Master Burger Point Kasur! 🍔 ${item.description} — Only Rs ${item.price}:`;
+    const text = `Check out ${item.name} at Top Taste Shawarma & Pizza Kasur! 🌯🍕 ${item.description} — Only Rs ${item.price}:`;
     
     if (navigator.share) {
       try {
-        await navigator.share({ title: `${item.name} | Master Burger Point Kasur`, text, url });
+        await navigator.share({ title: `${item.name} | Top Taste Kasur`, text, url });
         return;
       } catch {
         // Fallback
@@ -48,7 +49,7 @@ export function BestSellers() {
     if (navigator.clipboard) {
       try {
         await navigator.clipboard.writeText(`${text} ${url}`);
-        showToast(`Copied ${item.name} link! Share it in any chat 🍔`);
+        showToast(`Copied ${item.name} link! Share it in any chat 🌯🍕`);
         return;
       } catch {
         // Fallback
@@ -82,160 +83,156 @@ export function BestSellers() {
   };
 
   return (
-    <section id="signatures" className="py-8 sm:py-16 md:py-20 bg-[#FFFDF7] relative overflow-hidden">
+    <section id="signatures" className="py-8 sm:py-16 md:py-20 bg-[#FCFBF7] relative overflow-hidden">
       {/* Background radial highlight */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#FFC20E]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#F59E0B]/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10 space-y-2 sm:space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FFF5D9] border border-[#FFC20E] text-xs font-black text-[#8B1A1A] uppercase tracking-wider">
-            <Flame className="w-3.5 h-3.5 text-[#FFC20E] fill-[#FFC20E]" />
-            <span>Kasur&apos;s Legendary Tastes</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FEF3C7] border border-[#F59E0B]/40 text-xs font-black text-[#E11D48] uppercase tracking-wider">
+            <Flame className="w-3.5 h-3.5 text-[#E11D48] fill-[#E11D48]" />
+            <span>Kasur&apos;s Most Demanded Tastes</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-[#141414] leading-tight">
-            Famous Signatures &amp; Best Sellers
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-[#0F172A] leading-tight">
+            Top Taste Signatures &amp; Best Sellers
           </h2>
-          <p className="text-sm sm:text-base text-[#5C4E4B]">
-            Hand-crafted with traditional spices and decades of culinary heritage by Kasur&apos;s oldest burger point. These are the legendary favorites you cannot miss.
+          <p className="text-sm sm:text-base text-[#64748B]">
+            From our iconic Special Shawarma and Crown Crust Pizza to sizzling desi Karahi and juicy beef burgers, these are the all-time favorites celebrated across Kasur.
           </p>
         </div>
 
-        {/* Product Cards: Swipeable on mobile, Grid on desktop */}
-        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto pb-4 md:pb-0 snap-x snap-mandatory scrollbar-none">
+        {/* 6 Grid Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {signatureItems.map((item) => {
-            const currentSizeName =
+            const isAdded = addedItemAnim === item.id;
+            const currentSize =
               selectedSizes[item.id] || (item.sizes ? item.sizes[0].name : undefined);
             const displayPrice = item.sizes
-              ? item.sizes.find((s) => s.name === currentSizeName)?.price || item.price
+              ? item.sizes.find((s) => s.name === currentSize)?.price || item.price
               : item.price;
+            const highlights = ITEM_HIGHLIGHTS[item.id] || [];
 
             return (
               <motion.div
                 key={item.id}
                 whileHover={{ y: -6 }}
-                transition={{ duration: 0.25, ease: "easeOut" }}
-                className="min-w-[285px] sm:min-w-[320px] md:min-w-0 snap-center bg-white rounded-3xl p-4 border border-[#8B1A1A]/10 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between group"
+                transition={{ duration: 0.2 }}
+                className="bg-white rounded-3xl overflow-hidden border border-[#E11D48]/15 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group"
               >
                 <div>
-                  {/* Food Image with Zoom on Hover */}
+                  {/* Image Container with Badges */}
                   <div
-                    className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#FFF5D9] mb-4"
+                    className="relative aspect-[16/10] overflow-hidden bg-[#FEF3C7]/40"
                     style={{ position: "relative" }}
                   >
                     <Image
                       src={item.image}
                       alt={item.name}
                       fill
-                      sizes="(max-width: 768px) 80vw, 33vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                    {/* Badge */}
+                    {/* Badge Pill */}
                     {item.badge && (
-                      <div className="absolute top-3 left-3 bg-[#8B1A1A] text-[#FFF6DC] px-2.5 py-1 rounded-full text-[11px] font-black uppercase tracking-wider shadow-md">
-                        {item.badge}
+                      <div className="absolute top-3 left-3 bg-[#E11D48] text-white px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider shadow flex items-center gap-1">
+                        <Sparkles className="w-3 h-3 text-[#FBBF24]" />
+                        <span>{item.badge}</span>
                       </div>
                     )}
 
                     {/* Share Button */}
                     <button
                       onClick={(e) => handleShareItem(item, e)}
-                      className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-[#8B1A1A] flex items-center justify-center shadow-md active:scale-95 transition-all cursor-pointer border border-[#8B1A1A]/10"
-                      title="Share link with preview on chat"
-                      aria-label={`Share ${item.name} link`}
+                      aria-label={`Share ${item.name}`}
+                      className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white hover:bg-white hover:text-[#E11D48] transition-colors flex items-center justify-center cursor-pointer"
                     >
-                      <Share2 className="w-3.5 h-3.5 text-[#8B1A1A]" />
+                      <Share2 className="w-3.5 h-3.5" />
                     </button>
 
-                    {/* Quality Star Rating */}
-                    <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-md text-white px-2.5 py-0.5 rounded-full text-xs font-bold flex items-center gap-1 border border-white/20">
-                      <Star className="w-3 h-3 text-[#FFC20E] fill-[#FFC20E]" />
-                      <span>5.0</span>
+                    {/* Price Tag in Image */}
+                    <div className="absolute bottom-3 right-3 px-3 py-1 rounded-xl bg-[#0F172A]/90 backdrop-blur-md text-[#FBBF24] font-display text-base font-black shadow border border-[#F59E0B]/30">
+                      Rs {displayPrice.toLocaleString()}
                     </div>
                   </div>
 
-                  {/* Title & Description */}
-                  <div className="space-y-1.5">
-                    <h3 className="text-lg font-extrabold text-[#141414] group-hover:text-[#8B1A1A] transition-colors leading-snug">
+                  {/* Body Content */}
+                  <div className="p-5 space-y-3">
+                    <h3 className="text-lg font-display text-[#0F172A] leading-tight group-hover:text-[#E11D48] transition-colors">
                       {item.name}
                     </h3>
-                    <p className="text-xs text-[#5C4E4B] leading-relaxed">
+                    <p className="text-xs text-[#64748B] leading-relaxed line-clamp-2">
                       {item.description}
                     </p>
-                  </div>
 
-                  {/* Size Selector if available, or Chef Highlights */}
-                  {item.sizes && item.sizes.length > 1 ? (
-                    <div className="mt-3 pt-2.5 border-t border-gray-100">
-                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-1.5">
-                        Select Serving Size:
-                      </label>
-                      <div className="flex flex-wrap gap-1.5">
-                        {item.sizes.map((s) => (
-                          <button
-                            key={s.name}
-                            onClick={() =>
-                              setSelectedSizes((prev) => ({
-                                ...prev,
-                                [item.id]: s.name,
-                              }))
-                            }
-                            className={`px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
-                              currentSizeName === s.name
-                                ? "bg-[#8B1A1A] text-white shadow-sm"
-                                : "bg-[#FFF5D9] text-[#630F0F] hover:bg-[#FFEBB5]"
-                            }`}
-                          >
-                            {s.name}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  ) : ITEM_HIGHLIGHTS[item.id] ? (
-                    <div className="mt-3 pt-2.5 border-t border-gray-100">
-                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-1.5">
-                        Chef Highlights:
-                      </label>
-                      <div className="flex flex-wrap gap-1.5">
-                        {ITEM_HIGHLIGHTS[item.id].map((chip) => (
+                    {/* 3 Highlights chips */}
+                    {highlights.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 pt-1">
+                        {highlights.map((h, i) => (
                           <span
-                            key={chip}
-                            className="inline-flex items-center px-2 py-0.5 rounded-md bg-[#FFF5D9] text-[#630F0F] text-[10px] font-semibold border border-[#E86014]/15"
+                            key={i}
+                            className="px-2 py-0.5 rounded-md bg-[#FEF3C7] text-[#92400E] text-[10px] font-bold border border-[#F59E0B]/30"
                           >
-                            • {chip}
+                            ✓ {h}
                           </span>
                         ))}
                       </div>
-                    </div>
-                  ) : null}
+                    )}
+
+                    {/* Sizes Selection if applicable */}
+                    {item.sizes && (
+                      <div className="pt-2">
+                        <span className="block text-[10px] font-black uppercase text-[#64748B] mb-1.5">
+                          Select Size:
+                        </span>
+                        <div className="grid grid-cols-3 gap-1.5">
+                          {item.sizes.map((sz) => (
+                            <button
+                              key={sz.name}
+                              type="button"
+                              onClick={() =>
+                                setSelectedSizes((prev) => ({
+                                  ...prev,
+                                  [item.id]: sz.name,
+                                }))
+                              }
+                              className={`py-1.5 px-2 rounded-xl text-xs font-bold transition-all border ${
+                                currentSize === sz.name
+                                  ? "bg-[#E11D48] text-white border-[#E11D48] shadow-sm"
+                                  : "bg-[#FCFBF7] text-[#334155] border-gray-200 hover:border-[#E11D48]/40"
+                              }`}
+                            >
+                              <div className="text-[11px] leading-tight">{sz.name}</div>
+                              <div className="text-[10px] opacity-80">Rs {sz.price}</div>
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
 
-                {/* Bottom Row: Price & Add Button */}
-                <div className="mt-5 pt-3 border-t border-[#8B1A1A]/10 flex items-center justify-between">
-                  <div>
-                    <span className="text-[10px] font-bold text-gray-500 block uppercase">Price</span>
-                    <span className="text-lg font-display text-[#8B1A1A] tracking-tight">
-                      Rs {displayPrice.toLocaleString()}
-                    </span>
-                  </div>
-
+                {/* Bottom Add to Cart CTA */}
+                <div className="p-5 pt-0">
                   <button
                     onClick={() => handleAddToCart(item)}
-                    className={`px-4 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 transition-all cursor-pointer shadow-md active:scale-95 ${
-                      addedItemAnim === item.id
+                    className={`w-full py-3 px-4 rounded-2xl font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md ${
+                      isAdded
                         ? "bg-emerald-600 text-white"
-                        : "bg-[#FFC20E] hover:bg-[#E5AC00] text-[#730C0C]"
+                        : "bg-[#0F172A] hover:bg-[#E11D48] text-[#FCFBF7]"
                     }`}
-                    aria-label={`Add ${item.name} to feast bag`}
                   >
-                    {addedItemAnim === item.id ? (
+                    {isAdded ? (
                       <>
-                        <Check className="w-4 h-4" /> Added!
+                        <Check className="w-4 h-4" />
+                        <span>Added to Cart!</span>
                       </>
                     ) : (
                       <>
-                        <Plus className="w-4 h-4 stroke-[3]" /> Add to Bag
+                        <Plus className="w-4 h-4 text-[#FBBF24]" />
+                        <span>Add To Order • Rs {displayPrice.toLocaleString()}</span>
                       </>
                     )}
                   </button>
