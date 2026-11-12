@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Camera, X, ZoomIn, Eye, Download, ExternalLink } from "lucide-react";
 import { GALLERY_IMAGES } from "@/data/menu";
+import { useBodyScrollLock } from "@/lib/useBodyScrollLock";
 
 export function GallerySection() {
   const [activePhoto, setActivePhoto] = useState<{
@@ -12,6 +13,8 @@ export function GallerySection() {
     category: string;
     image: string;
   } | null>(null);
+
+  useBodyScrollLock(activePhoto !== null);
 
   return (
     <section id="gallery" className="py-8 sm:py-16 md:py-20 bg-[#FCFBF7] relative">

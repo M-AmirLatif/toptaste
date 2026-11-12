@@ -23,6 +23,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { RESTAURANT_INFO } from "@/data/menu";
 import { SITE_URL } from "@/lib/siteUrl";
+import { useBodyScrollLock } from "@/lib/useBodyScrollLock";
 
 const NAV_LINKS = [
   { name: "Home", href: "/#home", icon: Home },
@@ -92,6 +93,9 @@ export function Navbar() {
       clearInterval(interval);
     };
   }, []);
+
+  // Lock background webpage scroll while mobile navigation menu is open
+  useBodyScrollLock(isMobileMenuOpen);
 
   return (
     <>
@@ -234,14 +238,14 @@ export function Navbar() {
       {/* Mobile Professional Sideway Drawer */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-50 overflow-hidden">
+          <div className="lg:hidden fixed inset-0 z-50 overflow-hidden overscroll-none touch-none">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity"
+              className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity touch-none"
               aria-hidden="true"
             />
 
@@ -252,7 +256,7 @@ export function Navbar() {
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ type: "spring", stiffness: 320, damping: 30 }}
-                className="w-[84vw] max-w-[320px] bg-[#FCFBF7] shadow-2xl flex flex-col border-l border-[#E11D48]/15 relative z-10 h-full"
+                className="w-[84vw] max-w-[320px] bg-[#FCFBF7] shadow-2xl flex flex-col border-l border-[#E11D48]/15 relative z-10 h-full touch-auto"
                 aria-label="Mobile Navigation Drawer"
               >
                 {/* Drawer Header */}
@@ -286,7 +290,7 @@ export function Navbar() {
                 </div>
 
                 {/* Vertical Navigation Links */}
-                <div className="flex-1 overflow-y-auto p-3.5 space-y-1.5">
+                <div className="flex-1 overflow-y-auto overscroll-contain p-3.5 space-y-1.5">
                   <div className="text-[10px] font-black uppercase tracking-wider text-[#64748B] px-3 py-1">
                     Menu &amp; Details
                   </div>

@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { RESTAURANT_INFO } from "@/data/menu";
+import { useBodyScrollLock } from "@/lib/useBodyScrollLock";
 
 export function CartDrawer() {
   const {
@@ -43,17 +44,20 @@ export function CartDrawer() {
   const amountToFree = getAmountUntilFreeDelivery();
   const progressPercent = Math.min(100, Math.round((subtotal / RESTAURANT_INFO.minimumOrder) * 100));
 
+  // Lock background webpage scroll while cart drawer is open
+  useBodyScrollLock(isOpen);
+
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[70] overflow-hidden">
+        <div className="fixed inset-0 z-[70] overflow-hidden overscroll-none touch-none">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeCart}
-            className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity"
+            className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity touch-none"
             aria-hidden="true"
           />
 
@@ -63,7 +67,7 @@ export function CartDrawer() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 350, damping: 32 }}
-              className="w-screen max-w-md bg-[#FCFBF7] shadow-2xl flex flex-col border-l border-[#E11D48]/15 relative z-10"
+              className="w-screen max-w-md bg-[#FCFBF7] shadow-2xl flex flex-col border-l border-[#E11D48]/15 relative z-10 touch-auto"
             >
               {/* Header */}
               <div className="px-4 sm:px-5 py-4 bg-[#0F172A] text-white flex items-center justify-between shadow-md border-b-2 border-[#F59E0B]">
@@ -147,7 +151,7 @@ export function CartDrawer() {
               </div>
 
               {/* Items List or Empty State */}
-              <div className="flex-1 overflow-y-auto p-4 space-y-3">
+              <div className="flex-1 overflow-y-auto overscroll-contain p-4 space-y-3">
                 {items.length === 0 ? (
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 space-y-4">
                     <div className="w-20 h-20 rounded-full bg-[#FEF3C7] border-2 border-dashed border-[#F59E0B] flex items-center justify-center text-3xl">
